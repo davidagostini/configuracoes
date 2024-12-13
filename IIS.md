@@ -1,10 +1,12 @@
-sc.exe config aspnet_state start= auto
+
 
 
 # Ativar IIS via Linha de Comando
 
 
 ~~~code
+
+sc.exe config aspnet_state start= auto
 # Habilitar ASP.NET 3.5
 dism /Online /Enable-Feature /FeatureName:NetFx3 /All
 
