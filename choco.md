@@ -1,3 +1,12 @@
+# Instalar Choco e Programas
+
+
+~~~code
+
+
+
+
+ 
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
 
@@ -35,3 +44,5 @@ choco install netbird -y
 choco install s3browser -y
 choco install cloudflared -y
 choco install visualstudio2022community -y
+
+~~~
