@@ -91,6 +91,11 @@ dism /online /enable-feature /featurename:IIS-WebSockets /NoRestart
 dism /online /enable-feature /featurename:IIS-ManagementScriptingTools     /NoRestart
 dism /online /enable-feature /featurename:IIS-ManagementService /NoRestart
 
+dism /online /enable-feature /featurename:IIS-ManagementScriptingTools /featurename:IIS-ManagementService /all
+
+
+
+
 #Deixar o NetState Automatico
 sc.exe config aspnet_state start= auto
 
