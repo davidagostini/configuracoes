@@ -1,6 +1,9 @@
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
+
 choco upgrade all -y
+choco install choco-upgrade-all-at-startup -y
+
 
 choco install urlrewrite -y
 choco install sql-server-2022 -y
@@ -18,6 +21,7 @@ choco install greenshot -y
 choco install teamviewer -y
 choco install forticlient-vpn -y
 choco install azure-storage-explorer -y
+choco install microsoftazurestorageexplorer -y
 choco install azcopy10 -y
 choco install ditto -y
 choco install maven -y
