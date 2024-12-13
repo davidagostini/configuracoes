@@ -1,3 +1,6 @@
+sc.exe config aspnet_state start= auto
+
+
 # Ativar IIS via Linha de Comando
 
 
