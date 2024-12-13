@@ -6,7 +6,7 @@
 
 ~~~code
 
-sc.exe config aspnet_state start= auto
+
 # Habilitar ASP.NET 3.5
 dism /Online /Enable-Feature /FeatureName:NetFx3 /All
 
@@ -90,6 +90,9 @@ dism /online /enable-feature /featurename:IIS-WebSockets /NoRestart
 
 dism /online /enable-feature /featurename:IIS-ManagementScriptingTools     /NoRestart
 dism /online /enable-feature /featurename:IIS-ManagementService /NoRestart
+
+#Deixar o NetState Automatico
+sc.exe config aspnet_state start= auto
 
 ~~~
  
