@@ -28,8 +28,7 @@ choco install notepadplusplus -y
 choco install 7zip.install -y
 choco install greenshot -y
 choco install teamviewer -y
-choco install forticlient-vpn -y
-choco install azure-storage-explorer -y
+choco install forticlientvpn -y
 choco install microsoftazurestorageexplorer -y
 choco install azcopy10 -y
 choco install ditto -y
@@ -45,6 +44,7 @@ choco install s3browser -y
 choco install cloudflared -y
 choco install visualstudio2022community -y
 choco install androidstudio -y
-
 choco install office365business
+
+
 ~~~
