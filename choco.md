@@ -47,4 +47,6 @@ choco install androidstudio -y
 choco install office365business
 
 
+choco install dotnet-8.0-sdk -y
+choco install dotnet-8.0-windowshosting -y
 ~~~
