@@ -32,11 +32,12 @@ choco install forticlientvpn -y
 choco install microsoftazurestorageexplorer -y
 choco install azcopy10 -y
 choco install ditto -y
-choco install maven -y
+
 choco install obs-studio -y
 choco install git -y
 choco install screentogif -y
 choco install microsoft-openjdk-21 -y
+choco install maven -y
 choco install docker-desktop -y
 choco install winscp -y
 choco install netbird -y
@@ -44,9 +45,11 @@ choco install s3browser -y
 choco install cloudflared -y
 choco install visualstudio2022community -y
 choco install androidstudio -y
-choco install office365business
+choco install office365business -y
 
 
 choco install dotnet-8.0-sdk -y
 choco install dotnet-8.0-windowshosting -y
+
+
 ~~~
