@@ -55,4 +55,6 @@ choco install dotnet-8.0-windowshosting -y
 
 choco install openvpn-connect -y
 
+choco install vnc-viewer -y
+
 ~~~
