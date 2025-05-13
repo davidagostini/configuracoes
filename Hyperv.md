@@ -1,3 +1,9 @@
+
+# Ativar HyperV Windows 11 / Server
+
+
+~~~code
+
 Windows 11
 
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All
@@ -9,3 +15,5 @@ Install-WindowsFeature -Name Hyper-V -IncludeManagementTools -Restart
 
 
 Enable-WindowsOptionalFeature -Online -FeatureName "TelnetClient"
+
+~~~
