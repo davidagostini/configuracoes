@@ -99,5 +99,19 @@ dism /online /enable-feature /featurename:IIS-ManagementScriptingTools /featuren
 #Deixar o NetState Automatico
 sc.exe config aspnet_state start= auto
 
+:: Verificar se o recurso existe/estado
+DISM /Online /Get-Features /Format:Table | findstr IIS-ApplicationInit
+
+:: Habilitar o IIS básico (se ainda não tiver)
+DISM /Online /Enable-Feature /FeatureName:IIS-WebServer /All
+
+:: Habilitar o Application Initialization
+DISM /Online /Enable-Feature /FeatureName:IIS-ApplicationInit /All
+
+:: (Recomendado) reiniciar o IIS
+iisreset
+
+
+
 ~~~
  
