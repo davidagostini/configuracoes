@@ -61,4 +61,11 @@ choco install vnc-viewer -y
 choco install openjdk --version=17.0.2 -y
 
 
+
+
+rem setx JAVA_HOME "C:\Program Files\OpenJDK\jdk-22.0.2"
+rem setx PATH "%PATH%;%JAVA_HOME%\bin"
+
+
 ~~~
+
