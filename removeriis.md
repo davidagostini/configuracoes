@@ -1,3 +1,6 @@
+
+~~~code
+
 :: Parar o IIS antes de remover os componentes
 iisreset /stop
 
@@ -76,3 +79,5 @@ DISM /Online /Disable-Feature /FeatureName:IIS-WebServer
 # Parar e desabilitar o serviço de Estado do ASP.NET
 sc.exe stop aspnet_state
 sc.exe config aspnet_state start= disabled
+
+~~~
