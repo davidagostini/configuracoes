@@ -1,3 +1,5 @@
+
+~~code
 # Desativa o Print Screen no Snipping Tool (Acessibilidade)
 $regPath = "HKCU:\Software\Microsoft\Ease of Access\Keyboard"
 if (-not (Test-Path $regPath)) {
