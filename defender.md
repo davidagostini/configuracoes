@@ -20,8 +20,7 @@ Add-MpPreference -ExclusionPath "C:\Windows\Microsoft.NET\Framework64\v4.0.30319
 
 Add-MpPreference -ExclusionProcess "w3wp.exe"
 Add-MpPreference -ExclusionProcess "aspnet_state.exe"
-
-
+Add-MpPreference -ExclusionProcess "aspnet_wp.exe"
 
 ~~~
 
