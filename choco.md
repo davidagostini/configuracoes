@@ -60,7 +60,7 @@ choco install vnc-viewer -y
 
 choco install openjdk --version=17.0.2 -y
 
-
+choco install nodejs
 
 
 
