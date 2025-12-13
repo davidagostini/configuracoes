@@ -2,6 +2,7 @@
 
 
 ~~~code
+winget install --id Microsoft.PowerShell --source winget
 
 irm "https://christitus.com/win" | iex
 
