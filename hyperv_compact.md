@@ -1,3 +1,8 @@
+
+# Compactar Hyperv
+
+
+~~~code
 # =========================
 # Compactar VHD/VHDX de TODAS as VMs (Hyper-V)
 # =========================
@@ -97,3 +102,13 @@ foreach ($vm in $vms) {
 Write-Host ""
 Write-Host "Finalizado. Log em: $log"
 Stop-Transcript | Out-Null
+
+
+
+
+
+
+~~~
+
+
+
