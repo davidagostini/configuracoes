@@ -91,7 +91,7 @@ dism /online /enable-feature /featurename:IIS-WebSockets /NoRestart
 dism /online /enable-feature /featurename:IIS-ManagementScriptingTools     /NoRestart
 dism /online /enable-feature /featurename:IIS-ManagementService /NoRestart
 
-dism /online /enable-feature /featurename:IIS-ManagementScriptingTools /featurename:IIS-ManagementService /all
+dism /online /enable-feature /featurename:IIS-ManagementScriptingTools /featurename:IIS-ManagementService /all /NoRestart
 
 
 
@@ -100,13 +100,13 @@ dism /online /enable-feature /featurename:IIS-ManagementScriptingTools /featuren
 sc.exe config aspnet_state start= auto
 
 :: Verificar se o recurso existe/estado
-DISM /Online /Get-Features /Format:Table | findstr IIS-ApplicationInit
+DISM /Online /Get-Features /Format:Table | findstr IIS-ApplicationInit /NoRestart
 
 :: Habilitar o IIS básico (se ainda não tiver)
-DISM /Online /Enable-Feature /FeatureName:IIS-WebServer /All
+DISM /Online /Enable-Feature /FeatureName:IIS-WebServer /All /NoRestart
 
 :: Habilitar o Application Initialization
-DISM /Online /Enable-Feature /FeatureName:IIS-ApplicationInit /All
+DISM /Online /Enable-Feature /FeatureName:IIS-ApplicationInit /All /NoRestart
 
 :: (Recomendado) reiniciar o IIS
 iisreset
