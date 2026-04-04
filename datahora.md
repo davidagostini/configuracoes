@@ -2,28 +2,28 @@
 
 ~~~code
 
-# Definindo a URL de um servidor confiável (Google é excelente para isso)
 $url = "https://www.google.com"
 
 try {
-    # Realiza uma requisição básica para obter apenas o cabeçalho
+    # Obtém o cabeçalho do servidor
     $response = Invoke-WebRequest -Uri $url -Method Head -ErrorAction Stop
-    
-    # Extrai o valor "Date" do cabeçalho
     $httpDate = $response.Headers.Date
     
-    # Converte a string de data (GMT) para o formato DateTime local
-    $dateTime = [DateTime]::Parse($httpDate).ToLocalTime()
+    # Converte para DateTime em formato UTC (Universal)
+    $utcDateTime = [DateTime]::Parse($httpDate).ToUniversalTime()
     
-    Write-Host "Horário obtido via HTTP: $dateTime" -ForegroundColor Cyan
+    # Adiciona -3 horas manualmente para garantir o horário de Brasília
+    $brazilDateTime = $utcDateTime.AddHours(-3)
     
-    # Define a data e hora do sistema
-    Set-Date -Date $dateTime
+    Write-Host "Horário UTC: $utcDateTime" -ForegroundColor Gray
+    Write-Host "Horário calculado (Brasília UTC-3): $brazilDateTime" -ForegroundColor Cyan
     
-    Write-Host "Relógio atualizado com sucesso!" -ForegroundColor Green
+    # Aplica a data e hora no sistema
+    Set-Date -Date $brazilDateTime
+    
+    Write-Host "Relógio atualizado com sucesso para UTC-3!" -ForegroundColor Green
 }
 catch {
-    Write-Host "Erro ao tentar obter a hora via HTTP: $($_.Exception.Message)" -ForegroundColor Red
+    Write-Host "Erro: $($_.Exception.Message)" -ForegroundColor Red
 }
-
 ~~~
