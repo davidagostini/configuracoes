@@ -2,6 +2,8 @@
 
 ~~~code
 
+Set-TimeZone -Id "E. South America Standard Time"
+
 $url = "https://www.google.com"
 
 try {
