@@ -37,9 +37,9 @@ dism /online /enable-feature /featurename:MSMQ-Server /NoRestart
 
 # Habilitar Ambiente .NET 3.5
 # Habilitar HTTP Activation
-dism /online /enable-feature /featurename:WCF-HTTP-Activation /All
+dism /online /enable-feature /featurename:WCF-HTTP-Activation /All /NoRestart
 # Habilitar Non-HTTP Activation
-dism /online /enable-feature /featurename:WCF-NonHTTP-Activation /All
+dism /online /enable-feature /featurename:WCF-NonHTTP-Activation /All /NoRestart
  
 
 # Habilitar WCF HTTP Activation
