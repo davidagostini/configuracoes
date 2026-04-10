@@ -19,7 +19,8 @@ choco install choco-upgrade-all-at-startup -y
 
 choco install urlrewrite -y
 choco install iis-arr -y
-choco install sql-server-2022 -y
+rem choco install sql-server-2022 -y
+choco install sql-server-2025
 choco install sql-server-management-studio -y
 choco install dbeaver -y
 choco install googlechrome -y  --ignore-checksums
