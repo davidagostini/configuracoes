@@ -67,6 +67,7 @@ choco install nodejs -y
 
 choco install azure-cli
 
+choco install bambustudio
 
 refreshenv
 
