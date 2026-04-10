@@ -64,8 +64,10 @@ choco install openjdk --version=17.0.2 -y
 choco install nodejs -y
 
 
+choco install azure-cli
 
 
+refreshenv
 
 
 ~~~
