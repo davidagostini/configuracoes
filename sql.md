@@ -25,5 +25,16 @@ New-NetFirewallRule  -DisplayName "SQL Server 1433"  -Direction Inbound  -Protoc
 
 
 
+--------
+
+$path = "HKLM:\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device"
+New-Item -Path $path -Force | Out-Null
+New-ItemProperty -Path $path `
+    -Name "ForcedPhysicalSectorSizeInBytes" `
+    -PropertyType MultiString `
+    -Value "* 4095" `
+    -Force
+
+
 
 ~~~
