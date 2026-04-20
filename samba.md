@@ -22,3 +22,38 @@ Restart-Service -Name "LanmanWorkstation" -Force
 Write-Host "Pronto! Tente acessar o caminho de rede novamente." -ForegroundColor Yellow
 
 ~~~~
+
+~~~code
+
+$Servidor = "ftpback"
+$Caminho  = "\\ftpback\ns"
+
+Write-Host "Configurando cliente SMB para permitir guest sem assinatura..."
+
+New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation" -Force | Out-Null
+New-ItemProperty `
+  -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation" `
+  -Name "AllowInsecureGuestAuth" `
+  -Value 1 `
+  -PropertyType DWord `
+  -Force | Out-Null
+
+Set-SmbClientConfiguration -EnableInsecureGuestLogons $true -Force
+Set-SmbClientConfiguration -RequireSecuritySignature $false -Force
+
+Restart-Service LanmanWorkstation -Force
+
+Write-Host ""
+Write-Host "Teste porta 445:"
+Test-NetConnection $Servidor -Port 445
+
+Write-Host ""
+Write-Host "Teste caminho:"
+Test-Path $Caminho
+
+Write-Host ""
+Write-Host "Tentando mapear:"
+net use * $Caminho /user:Guest ""
+
+
+~~~~
