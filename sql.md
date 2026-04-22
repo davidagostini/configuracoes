@@ -36,5 +36,7 @@ New-ItemProperty -Path $path `
     -Force
 
 
+-----
 
+MAQUINA;TrustServerCertificate=yes
 ~~~
