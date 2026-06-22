@@ -65,9 +65,11 @@ choco install openjdk --version=17.0.2 -y
 choco install nodejs -y
 
 
-choco install azure-cli
+choco install azure-cli -y
 
-choco install bambustudio
+choco install bambustudio -y
+choco install python --version=3.12.9 -y
+
 
 refreshenv
 
