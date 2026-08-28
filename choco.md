@@ -52,9 +52,13 @@ choco install visualstudio2022community -y
 choco install androidstudio -y
 choco install office365business -y
 
+choco install dotnet-10.0-sdk -y
+choco install dotnet-10.0-windowshosting -y
 
-choco install dotnet-8.0-sdk -y
-choco install dotnet-8.0-windowshosting -y
+
+#choco install dotnet-8.0-sdk -y
+#choco install dotnet-8.0-windowshosting -y
+
 
 choco install openvpn-connect -y
 
