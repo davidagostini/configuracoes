@@ -74,6 +74,9 @@ choco install azure-cli -y
 choco install bambustudio -y
 choco install python --version=3.12.9 -y
 
+# Limpar Comandos Executados
+#Remove-Item (Get-PSReadLineOption).HistorySavePath -Force
+
 
 refreshenv
 
