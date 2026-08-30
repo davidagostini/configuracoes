@@ -111,6 +111,8 @@ DISM /Online /Enable-Feature /FeatureName:IIS-ApplicationInit /All /NoRestart
 :: (Recomendado) reiniciar o IIS
 iisreset
 
+# Limpar Comandos Executados
+#Remove-Item (Get-PSReadLineOption).HistorySavePath -Force
 
 
 ~~~
